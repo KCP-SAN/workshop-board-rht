@@ -902,8 +902,8 @@
                     console.error('Error deleting note:', error)
                     alert('付箋の削除に失敗しました')
                 } else {
-                    // 削除成功後、すぐにUIを更新
-                    await loadNotes()
+                    // 削除成功後、すぐにUIを更新（sectionパラメータを渡す）
+                    await loadNotes(section)
                     await updateStats()
                 }
             }
